@@ -64,6 +64,9 @@ _SET_DATETIME = 0x33
 
 _GET_MODEL = 0x24
 
+# The serial number and glucose unit commands were ported from an
+# independent implementation of the protocol:
+# (https://github.com/kolos/glucometer)
 _GET_SERIAL_NUMBER_LOW = 0x27
 _GET_SERIAL_NUMBER_HIGH = 0x28
 
@@ -74,10 +77,6 @@ _GET_READING_VALUE = 0x26
 _GET_RANGE = 0x2F
 
 _CLEAR_MEMORY = 0x52
-
-# The serial number and glucose unit commands were ported from an
-# independent implementation of the protocol:
-# (https://github.com/kolos/glucometer)
 
 _MODEL_STRUCT = construct.Struct(
     model=construct.Int16ul,
